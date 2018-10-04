@@ -9,14 +9,15 @@
             <li v-for="item in items">{{ item.title }}</li>
         </ul>
         <button v-on:click="greet('hello world local arg')">Say Greet</button>  
-        </br>      
+        <br>      
         <input type="text" v-on:keyup="pressKey" v-on:keyup.enter="pressEnter"/>
-        </br>
+        <br>
         <label>First Name:</label><input type="text" v-model="user.first_name"> 
-        </br>
+        <br>
         <label>Last Name:</label><input type="text" v-model="user.last_name">
-        </br>
+        <br>
         <h3>{{fullName}}</h3>
+        <h2>{{msg}}</h2>
     </div>
 </template>
 
@@ -24,6 +25,12 @@
 
 export default {
     name: 'test',
+    props: {
+        msg: {
+            type: String,
+            default: 'Default msg from props'
+        }
+    },
     data() {
         return {
             title: 'Hello World',

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <test></test>
+    <test msg="hello from app.vue test component"></test>
   </div>
 </template>
 
