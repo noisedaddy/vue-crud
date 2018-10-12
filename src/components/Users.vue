@@ -9,7 +9,7 @@
             <input type="submit" value="Submit"/>
         </form>
         <ul>
-            <li v-for="user in users">
+            <li v-for="user in users" v-bind:key="user">
               <input type="checkbox" class="toggle" v-model="user.contacted" />
                 <span :class="{contacted: user.contacted}">
                   {{user.name}}:{{user.email}} <button v-on:click="deleteUser(user)">X</button>

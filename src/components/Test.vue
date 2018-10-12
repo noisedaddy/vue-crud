@@ -2,17 +2,17 @@
     <div id="test">
         <input type="text" v-model="title">
         <h1>{{ title }}</h1>
-        <p>{{user.first_name}}</p>        
+        <p>{{user.first_name}}</p>
         <p v-if="show">{{user.last_name}}</p>
         <p v-else>NoBOdy</p>
         <ul>
-            <li v-for="item in items">{{ item.title }}</li>
+            <li v-for="item in items" v-bind:key="item">{{ item.title }}</li>
         </ul>
-        <button v-on:click="greet('hello world local arg')">Say Greet</button>  
-        <br>      
+        <button v-on:click="greet('hello world local arg')">Say Greet</button>
+        <br>
         <input type="text" v-on:keyup="pressKey" v-on:keyup.enter="pressEnter"/>
         <br>
-        <label>First Name:</label><input type="text" v-model="user.first_name"> 
+        <label>First Name:</label><input type="text" v-model="user.first_name">
         <br>
         <label>Last Name:</label><input type="text" v-model="user.last_name">
         <br>
