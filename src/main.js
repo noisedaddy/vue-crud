@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import vueResource from 'vue-resource'
-import App from './App'
+// import App from './App'
 import Users from './components/Users'
 import Test from './components/Test'
 
@@ -39,7 +39,6 @@ new Vue({
   <li><router-link to="/test">Test</router-link></li>
   </ul>
   <router-view></router-view>
-
   </div>
   `,
   // components: { App },
